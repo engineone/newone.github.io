@@ -97,11 +97,26 @@ body{
       }
   
 
-#about video{
-  height:auto;
-  width:90%;
-  float: left;
+#about .video{
+  text-align: center;
   }
+  .video {
+    position: relative;
+    padding-bottom: 30%; /* 4:3? */
+    height: 0;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 768px)  {
+  .video {
+    padding-bottom: 60%; /* 4:3? */
+  }
+}
 
 #total{
   padding-top:3em;
@@ -200,11 +215,8 @@ their version control workflow.</h3>
         
         </p>
       </div>
-      <div class="col-sm-6">
-        <video class='about-video' style="max-width: 100%;" controls='controls'>
-          <source id='video' style="width: 100%;" src="images/screencast.mp4" type='video/mp4'>
-        </video>
-  
+      <div class="col-sm-6 video">
+        <iframe src="https://www.youtube.com/embed/5mzZ6oGLnUw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 </div>
